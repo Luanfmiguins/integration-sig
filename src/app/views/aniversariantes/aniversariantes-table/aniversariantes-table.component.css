@@ -1,0 +1,152 @@
+table {
+    width: 100%;
+}
+
+.container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .info{
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+  }
+  .divinfo{
+   padding: 10px;
+  }
+
+.Pre-Adesão {
+    color: #ff0000;
+}
+
+.ADESÃO {
+    color: #ffa500;
+}
+
+td {
+    text-transform: uppercase;
+}
+
+.ENVIADO-PARA-O-SISTEMA {
+    color: #1d6249;
+}
+
+.print {
+    font-size: 20px;
+    color: #093653;
+    margin-left: 5px;
+}
+
+.print:hover {
+    color: #000000;
+}
+
+.edit {
+    font-size: 20px;
+    color: #1d6249;
+    margin-left: 5px;
+}
+
+.edit:hover {
+    color: #000000;
+}
+
+.visibility {
+    font-size: 20px;
+    color: #4e8d91;
+    margin-left: 5px;
+}
+
+.visibility:hover {
+    color: #000000;
+}
+
+.delete {
+    font-size: 20px;
+    color: #da3c3c;
+    margin-left: 5px;
+}
+
+.delete:hover {
+    color: #000000;
+}
+
+.status {
+    font-size: 20px;
+    color: #3bc14a;
+    margin-left: 5px;
+}
+
+.status:hover {
+    color: #000000;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.btn-sig{
+    background-color: #000000;
+    color: white;
+    border: none;
+    width: 78px;
+    height: 35px;
+    border-radius: 2px;
+    margin:3px;
+  }
+  
+  .btn-sig:hover{
+    background-color: #a7a7a7;
+  
+  }
+  .mat-paginator-page-size-label{
+      color: #000000;
+  }
+  .img-table{
+    width: 35px;
+    margin-top: 4px;
+    border-radius: 50%;
+    border: 1px solid #cecece;
+    }
+  @media (max-width: 600px) {
+    .container{
+      display: block;
+      height: 100%;
+    }
+    .input-1{
+      width: 100%;
+    }
+    .input-2{
+      width: 100%;
+    }
+    .input-3{
+      width: 100%;
+    }
+    .input-4{
+      width: 100%;
+    }
+    .input-7{
+      width: 100%;
+    }
+    .btn-sig{
+      width: 99%;
+    }
+  }

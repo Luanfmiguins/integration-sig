@@ -1,0 +1,26 @@
+<div class="info">
+    <div class="divinfo">
+        <div class="title">
+            <div class="proposta">
+                <h2>Criar Ramal</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="input-3 marginr">
+                <label>Nome</label>
+                <input [(ngModel)]="ramais.nome">
+            </div>
+            <div class="input-3 marginr">
+                <label>Setor</label>
+                <input [(ngModel)]="ramais.setor">
+            </div>
+            <div class="input-3 marginr">
+                <label>Ramal</label>
+                <input [(ngModel)]="ramais.ramal">
+            </div>
+        </div>
+        <button class="marginr" (click)="createRamais()">Criar</button>
+        <button (click)="cancel()">Sair</button>
+    </div>
+</div>

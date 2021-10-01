@@ -1,0 +1,21 @@
+.icon{
+    width: 37px;
+    padding-left: 10px;
+}
+ 
+.footer{
+    position:fixed;
+    bottom: 0;
+
+    display: flex;
+    justify-content:flex-end;
+}
+
+.footer{
+    font-size: 1rem;
+    font-weight: 300;
+
+}
+.footer{
+    height: 100px;
+}

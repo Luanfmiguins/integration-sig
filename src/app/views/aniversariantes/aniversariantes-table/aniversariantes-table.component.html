@@ -1,0 +1,60 @@
+<div class="info">
+    <div class="divinfo">
+        <table (click)="ngOnInit()" mat-table class="content-table bg-dark full-width-table" matSort aria-label="Elements" [dataSource]="aniversariante">
+
+
+            <!-- Foto Coluna -->
+        
+            <ng-container matColumnDef="foto">
+                <th class="thead" mat-header-cell *matHeaderCellDef>IMAGEM</th>
+                <td class="tbody" mat-cell *matCellDef="let row">
+                    <img class="img-table"src="{{row.foto}}" alt=""></td>
+            </ng-container>
+        
+            <!-- Nome Coluna -->
+        
+            <ng-container matColumnDef="nome">
+                <th class="thead" mat-header-cell *matHeaderCellDef>NOME</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.nome| uppercase}}</td>
+            </ng-container>
+        
+            <!-- Data Coluna -->
+            <ng-container matColumnDef="data">
+                <th class="thead" mat-header-cell *matHeaderCellDef>DATA</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.data| uppercase}}</td>
+            </ng-container>
+        
+            <!-- Ações Coluna -->
+        
+            <ng-container matColumnDef="açôes">
+                <th class="thead" mat-header-cell *matHeaderCellDef>AÇŌES</th>
+                <td class="tbody" mat-cell *matCellDef="let row">
+                    <a routerLink="/aniversariantes/view/{{ row._id }}" class="visibility">
+                        <i class="material-icons">visibility</i>
+                    </a>
+                    <a routerLink="/aniversariantes/update/{{ row._id }}" class="edit">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a routerLink="/aniversariantes/delete/{{ row._id }}" class="delete">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </td>
+            </ng-container>
+        
+        
+        
+            <tr class="tbody" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr class="tbody" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        
+        
+        
+        </table>
+        
+        
+        <mat-paginator style="color:#fff;" #paginator class="bg-dark" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+        <button class="btn-sig" (click)="navigateToAniversarianteCreate()">Incluir</button>
+         
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="info">
+    <div class="divinfo">
+        <div class="title">
+            <div class="proposta">
+                <h2>Criar Noticias</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="input-7 marginr">
+                <label>Titulo</label>
+                <input disabled [(ngModel)]="noticias.titulo">
+            </div>
+            <div class="input-4 marginr">
+                <label>Status</label>
+                <input disabled  [(ngModel)]="noticias.status">
+            </div>
+        </div>
+        <div class="container">
+            <div class="input-1 marginr">
+                <label>Texto</label>
+                <textarea disabled  name="" id="" cols="30" rows="10" [(ngModel)]="noticias.text"></textarea>
+            </div>
+        </div>
+        <button class="marginr" (click)="deleteNoticias()">Excluir</button>
+        <button (click)="cancel()">Sair</button>
+    </div>
+</div>

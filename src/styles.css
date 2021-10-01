@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    
+  }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.snack-bar-sucess {
+  background-color: #00ff00;
+  color: #ffffff;
+  margin-top: 51px;
+}
+.snack-bar-err {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+.snack-bar-view {
+  background-color: #001aff;
+  color: #ffffff;
+}

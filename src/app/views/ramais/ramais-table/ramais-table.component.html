@@ -1,0 +1,61 @@
+
+
+<div class="info">
+    <div class="divinfo">
+        <table mat-table class="content-table bg-dark full-width-table" matSort aria-label="Elements" [dataSource]="ramais">
+
+
+            <!-- Status Coluna -->
+        
+            <ng-container matColumnDef="nome">
+                <th class="thead" mat-header-cell *matHeaderCellDef>NOME</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.nome | uppercase}}</td>
+            </ng-container>
+        
+            <!-- Nome Coluna -->
+        
+            <ng-container matColumnDef="setor">
+                <th class="thead" mat-header-cell *matHeaderCellDef>SETOR</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.setor | uppercase}}</td>
+            </ng-container>
+        
+            <!-- CPF Coluna -->
+        
+            <ng-container matColumnDef="ramal">
+                <th class="thead" mat-header-cell *matHeaderCellDef>RAMAL</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.ramal| uppercase}}</td>
+            </ng-container>
+        
+            <!-- Vizualizar Coluna -->
+        
+            <ng-container matColumnDef="açôes">
+                <th class="thead" mat-header-cell *matHeaderCellDef>AÇŌES</th>
+                <td class="tbody" mat-cell *matCellDef="let row">
+                    <a routerLink="/ramais/view/{{ row._id }}" class="visibility">
+                        <i class="material-icons">visibility</i>
+                    </a>
+                    <a routerLink="/ramais/update/{{ row._id }}" class="edit">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a routerLink="/ramais/delete/{{ row._id }}" class="delete">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </td>
+            </ng-container>
+        
+        
+        
+            <tr class="tbody" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr class="tbody" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        
+        
+        
+        </table>
+        <mat-paginator style="color:#fff;" #paginator class="bg-dark" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+        <br>
+        <button class="btn-sig" (click)="navigateToClienteCreate()">Incluir</button>
+    </div>
+</div>
+ 

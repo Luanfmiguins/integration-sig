@@ -1,0 +1,26 @@
+<div class="info">
+    <div class="divinfo">
+        <div class="title">
+            <div class="proposta">
+                <h2>Deletar Aniversariante</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="input-3 marginr">
+                <label>Nome</label>
+                <input disabled [(ngModel)]="aniversariante.nome">
+            </div>
+            <div class="input-3 marginr">
+                <label>Data</label>
+                <input disabled type="date" [(ngModel)]="aniversariante.data">
+            </div>
+            <div class="input-3 marginr">
+                <label>url da Imagem</label>
+                <input disabled type="url" [(ngModel)]="aniversariante.foto">
+            </div>
+        </div>
+        <button class="marginr" (click)="deleteAniversariante()">Excluir</button>
+        <button (click)="cancel()">Sair</button>
+    </div >
+</div>

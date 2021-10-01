@@ -1,0 +1,32 @@
+<div class="info">
+    <div class="divinfo">
+        <div class="title">
+            <div class="proposta">
+                <h2>Criar Notícias</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="input-7 marginr">
+                <label>Título</label>
+                <input [(ngModel)]="noticias.titulo">
+            </div>
+            <div class="input-4 marginr">
+                    <label>Importância</label>
+                <select [(ngModel)]="noticias.status" name="documento" required>
+                    <option value="Alta">Alta</option>
+                    <option value="Media">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+            </div>
+        </div>
+        <div class="container">
+            <div class="input-1 marginr">
+                <label>Texto</label>
+                <textarea name="" id="" cols="30" rows="10" [(ngModel)]="noticias.text"></textarea>
+            </div>
+        </div>
+        <button class="marginr" (click)="updateNoticias()">Editar</button>
+        <button (click)="cancel()">Sair</button>
+    </div>
+</div>

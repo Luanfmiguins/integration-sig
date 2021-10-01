@@ -1,0 +1,105 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url("https://i.ibb.co/ZHb9cbx/auth2.png");
+    background-size: cover;
+    color: #000;
+    display: flex;
+    justify-content:left;
+    align-items: start;
+}
+
+.divquadro {
+    width: 27vw;
+    min-width: 350px;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    margin-top: 0px;
+}
+
+.divlogin {
+    width: 100%;
+    margin-top: 43px;
+    background-color: transparent;
+}
+
+.img {
+    width: 100%;
+}
+
+.input {
+    width: 77%;
+    height: 40px;
+    margin-top: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #24196e;
+}
+
+.input:hover {
+    border-bottom: 2px solid #24196e;
+}
+
+.button {
+    margin-top: 50px;
+    width: 77%;
+    height: 40px;
+    border: none;
+    color: #fff;
+    background-color: #0f054c;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #24196e;
+}
+.img-circle{
+    width: 150px;
+    height: 150px;
+    border: 1px solid #afafaf;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.divimg{
+    display: flex;
+    justify-content: center;
+}
+.img2{
+    margin-left: -55px;
+}
+
+@media (max-width: 800px) {
+    .divquadro {
+        width: 100%;
+        height: 100%;
+    }
+    .input {
+        width: 77%;
+        height: 40px;
+        margin-top: 50px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #000000;
+    }
+    
+    .input:hover {
+        border-bottom: 2px solid #000000;
+    }
+    
+    .button {
+        margin-top: 50px;
+        width: 77%;
+        height: 40px;
+        border: none;
+        color: #fff;
+        background-color: #000000;
+        border-radius: 8px;
+    }
+    
+    .button:hover {
+        background-color: #292929;
+    }
+}

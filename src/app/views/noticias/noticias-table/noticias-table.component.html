@@ -1,0 +1,64 @@
+<div class="info">
+    <div class="divinfo">
+        <table (click)="ngOnInit()" mat-table class="content-table bg-dark full-width-table" matSort aria-label="Elements" [dataSource]="noticias">
+
+
+            <!-- Status Coluna -->
+        
+            <ng-container matColumnDef="status">
+                <th class="thead" mat-header-cell *matHeaderCellDef>IMPORTANCIA</th>
+                <td class="tbody" mat-cell *matCellDef="let row">
+                    <div class="tooltip"><i class="material-icons {{row.status}}">radio_button_checked</i>
+                        <span class="tooltiptext">{{row.status}}</span>
+                    </div>
+                </td>
+        
+            </ng-container>
+        
+            <!-- Nome Coluna -->
+        
+            <ng-container matColumnDef="titulo">
+                <th class="thead" mat-header-cell *matHeaderCellDef>TITULO</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.titulo | uppercase}}</td>
+            </ng-container>
+        
+            <!-- CPF Coluna -->
+        
+            <ng-container matColumnDef="data">
+                <th class="thead" mat-header-cell *matHeaderCellDef>DATA</th>
+                <td class="tbody" mat-cell *matCellDef="let row">{{row.data| uppercase}}</td>
+            </ng-container>
+        
+        
+            <ng-container matColumnDef="açôes">
+                <th class="thead" mat-header-cell *matHeaderCellDef>AÇŌES</th>
+                <td class="tbody" mat-cell *matCellDef="let row">
+                    <a routerLink="/noticias/view/{{ row._id }}" class="visibility">
+                        <i class="material-icons">visibility</i>
+                    </a>
+                    <a routerLink="/noticias/update/{{ row._id }}" class="edit">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <a routerLink="/noticias/delete/{{ row._id }}" class="delete">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </td>
+            </ng-container>
+        
+        
+        
+            <tr class="tbody" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr class="tbody" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+        
+        
+        
+        </table>
+        
+        
+        <mat-paginator style="color:#fff;" #paginator class="bg-dark" [pageIndex]="0" [pageSize]="10" [pageSizeOptions]="[5, 10, 20]">
+        </mat-paginator>
+        <button class="btn-sig" (click)="navigateToNoticiasCreate()">Incluir</button>
+        
+    </div>
+</div>

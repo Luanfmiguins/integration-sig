@@ -1,0 +1,24 @@
+<div class="info">
+    <div class="divinfo" (click)="visualizar()">
+        <div class="title">
+            <div class="proposta">
+                <h2>NOTÍCIA</h2>
+                <i style="margin-right: 21px;" class="material-icons {{noticias.status}}">radio_button_checked</i>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="input-1 marginr">
+                <label>Titulo</label>
+                <input disabled  [(ngModel)]="noticias.titulo">
+            </div>
+        </div>
+        <div class="container">
+            <div class="input-1 marginr">
+                <label>Texto</label>
+                <textarea disabled  name="" id="" cols="30" rows="10" [(ngModel)]="noticias.text"></textarea>
+            </div>
+        </div>
+        <button (click)="cancel()">Sair</button>
+    </div>
+</div>

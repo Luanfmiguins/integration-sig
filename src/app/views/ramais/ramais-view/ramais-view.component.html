@@ -1,0 +1,25 @@
+<div class="info">
+    <div class="divinfo" (click)="visualizar()">
+        <div class="title">
+            <div class="proposta">
+                <h2>Ramal</h2>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="input-3 marginr">
+                <label>Nome</label>
+                <input disabled [(ngModel)]="ramais.nome">
+            </div>
+            <div class="input-3 marginr">
+                <label>Setor</label>
+                <input disabled [(ngModel)]="ramais.setor">
+            </div>
+            <div class="input-3 marginr">
+                <label>Ramal</label>
+                <input disabled [(ngModel)]="ramais.ramal">
+            </div>
+        </div>
+        <button (click)="cancel()">Sair</button>
+    </div>
+</div>

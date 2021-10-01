@@ -1,0 +1,33 @@
+
+<app-navbar></app-navbar> 
+<mat-sidenav-container class="container">
+   
+    <mat-sidenav #drawer class="sidenav" mode="side" fixedInViewport="true" opened fixedTopGap="47">
+        <nav class="nav">
+            <div>  
+                <div class="nav__list"> 
+                    <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+                        <a class="nav-link" [routerLink]="[menuItem.path]">
+                            <i class="material-icons-outlined">{{menuItem.icon}}</i>
+                            <p class=" nav-title">{{menuItem.title}}</p>
+                        </a>
+                    </li>              
+                </div> 
+            </div> 
+            <a class="nav-link" routerLink="/login">
+                <i class="material-icons-outlined nav__icon" >logout</i>
+                <p class="nav-title">Sair</p>
+            </a>
+       </nav> 
+    </mat-sidenav>  
+
+
+
+    
+
+      <div class="info" >
+        <router-outlet></router-outlet>
+    </div>  
+    
+
+</mat-sidenav-container>
